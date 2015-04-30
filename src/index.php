@@ -57,7 +57,12 @@
 				<div class="grey">
 				<div class="well">
 					<h3>
-					Hello test!
+						<?php
+session_start();
+if(session_is_registered(myusername)){
+echo 'Hello '.$_SESSION["username"].'!';
+}
+?>
 					</h3>
 				</div>
 				</div>
@@ -71,7 +76,7 @@
 			<div class="row clearfix">
 				<div class="col-md-12 column">
 					<div class="btn-group btn-group-vertical btn-group-lg">
-						 <a href="index.html" class="btn btn-primary" type="button"> Home</a>
+						 <a href="index.php" class="btn btn-primary" type="button"> Home</a>
  						 <a href=""  class="btn btn-info" type="button"> Help</a>
  						 <a href="" class="btn btn-success" type="button"> Tools</a> 
 						 <a href="tutorial.html" class="btn btn-warning" type="button"> Tutorial</a>
