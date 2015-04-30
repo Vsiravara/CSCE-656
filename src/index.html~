@@ -88,19 +88,19 @@
 				</div>
 				
 				<div class="col-md-6 column">
-					<img alt="280x280" src="lock.png" style="max-height: 300px; max-width: 300px;">
-					<h4>Level 2</h4>
+					<a href="question21.html"><img alt="280x280" src="lock.png" style="max-height: 300px; max-width: 300px;">
+					<h4>Level 2</h4></a>
 				</div>
 			</div>
 			<hr>
 			<div class="row ">
 				<div class="col-md-6 column">
-					<img alt="280x280" src="lock.png" style="max-height: 300px; max-width: 300px;">
+				<a href="question31.html"><img alt="280x280" src="lock.png" style="max-height: 300px; max-width: 300px;"></a>
 					<h4>Level 3</h4>
 				</div>
 				
 				<div class="col-md-6 column">
-					<img alt="280x280" src="lock.png" style="max-height: 300px; max-width: 300px;">
+					<a href="question41.html"><img alt="280x280" src="lock.png" style="max-height: 300px; max-width: 300px;"></a>
 					<h4>Level 4</h4>
 				</div>
 			</div>
