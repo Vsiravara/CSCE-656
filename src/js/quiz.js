@@ -1,4 +1,4 @@
-$(document).ready(function() 
+/*$(document).ready(function() 
 {    $("#results").click(function() {                
 
 if (!$("input[@name=q1]:checked").val() ||            
@@ -81,3 +81,29 @@ if (cat11) { $("#category11").show("slow"); };
 { $("#closing").show("slow"); };
 }
     });});
+*/	
+	
+$( document ).ready(function() {
+	 $.scoreIncrement = function()
+    {
+       var score = 0;
+     score++;
+     document.getElementById("score").innerText="<strong>Score: </strong>" + score; 
+    }
+ 
+    /*$( "a" ).click(function( event ) {
+ 
+        alert( "Thanks for visiting!" );
+ 
+    });*/
+ 
+});
+	
+// $(document).ready(
+
+ // scoreIncrement : function(){
+	// var score = 0;
+    // score++;
+    // document.getElementById("score").innerText="<strong>Score: </strong>" + score; 
+// }​
+	 // });
