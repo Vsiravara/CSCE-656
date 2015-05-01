@@ -49,14 +49,21 @@
 			
 			<div class="row clearfix">
 				<div class="col-md-3 column">
-					<img class="img-circle" alt="User Image" src="img/pikachu.jpeg" onclick="www.google.com">
+					<img class="img-circle" alt="140x140" src="pikachu.jpeg" onclick="www.google.com">
 				</div>
 				<hr>
 				
 				<div class="col-md-9 column">
 				<div class="grey">
 				<div class="well">
-					<h3 class="text-center">Welcome, Pikachu!</h3>
+					<h3>
+						<?php
+session_start();
+if(session_is_registered(myusername)){
+echo 'Hello '.$_SESSION["username"].'!';
+}
+?>
+					</h3>
 				</div>
 				</div>
 				</div>
@@ -65,40 +72,40 @@
 	</div>
 	<hr>
 	<div class="row clearfix">
-		<div class="col-md-3 column">
+		<div class="col-md-2 column">
 			<div class="row clearfix">
 				<div class="col-md-12 column">
-					<div class="btn-group-vertical btn-group-lg" role="group">
-						 <a href="index.html" class="btn btn-primary" type="button"> Home</a>
- 						 <a href="https://www.google.com/search?client=ubuntu&channel=fs&q=google+calculator&ie=utf-8&oe=utf-8" class="btn btn-success" type="button"> Tools</a> 
+					<div class="btn-group btn-group-vertical btn-group-lg">
+						 <a href="index.php" class="btn btn-primary" type="button"> Home</a>
+ 						 <a href=""  class="btn btn-info" type="button"> Help</a>
+ 						 <a href="" class="btn btn-success" type="button"> Tools</a> 
 						 <a href="tutorial.html" class="btn btn-warning" type="button"> Tutorial</a>
-						 <a href="https://docs.google.com/forms/d/1K23b3lFIwX4KjeBBM3YDtIpuizV2uH1MiIuC1lG_RXk/viewform"  class="btn btn-info" type="button"> Feedback</a>
 						 <a href="" class="btn btn-danger" type="button"> Logout</a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="col-md-9 column">
+		<div class="col-md-10 column">
 			<div class="row ">
 				<div class="col-md-6 column">
-					<a href="quiz_level_1.html"><img alt="512x512" src="unlock.png" style="max-height: 256px; max-width: 256px;"></a>
+					<a href="question11.html"><img alt="512x512" src="unlock.png" style="max-height: 300px; max-width: 300px;"></a>
 					<h4>Level 1</h4>		
 				</div>
 				
 				<div class="col-md-6 column">
-					<img alt="280x280" src="lock.png" style="max-height: 256px; max-width: 256px;">
-					<h4>Level 2</h4>
+					<a href="question21.html"><img alt="280x280" src="lock.png" style="max-height: 300px; max-width: 300px;">
+					<h4>Level 2</h4></a>
 				</div>
 			</div>
 			<hr>
 			<div class="row ">
 				<div class="col-md-6 column">
-					<img alt="280x280" src="lock.png" style="max-height: 256px; max-width: 256px;">
+				<a href="question31.html"><img alt="280x280" src="lock.png" style="max-height: 300px; max-width: 300px;"></a>
 					<h4>Level 3</h4>
 				</div>
 				
 				<div class="col-md-6 column">
-					<img alt="280x280" src="lock.png" style="max-height: 256px; max-width: 256px;">
+					<a href="question41.html"><img alt="280x280" src="lock.png" style="max-height: 300px; max-width: 300px;"></a>
 					<h4>Level 4</h4>
 				</div>
 			</div>
