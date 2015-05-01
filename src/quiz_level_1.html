@@ -31,8 +31,29 @@
 	<script type="text/javascript" src="js/angular.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/scripts.js"></script>
-	<script type="text/javascript" src="js/quiz2.js"></script>
+	<!--<script type="text/javascript" src="js/quiz.js"></script>-->
 
+	<script type="text/javascript">
+		var score = 0,
+		answers = {q0: 'b', q1: 'b', q2: 'd', q3: 'd', q4: 'a', q5: 'd', q6: 'c', q7: 'a', q8: 'c', q9: 'b'};
+		
+		$(document).ready(function(){
+			$('input:radio').click(function(){
+			var question = $(this).attr('name');
+			var answer = $(this).val();
+				if (answers[question] == answer){
+					score++;
+					alert("That's correct; great job!");
+					
+				} else{
+					alert("That's incorrect; please try again!")
+				}
+				//score++;
+				//alert(answers[question] == answer);
+				document.getElementById('score-span').innerHTML = score;
+			});
+		});
+	</script>
    <style>
   .grey{
 		background-color: #7FFFD4;
@@ -105,10 +126,10 @@
 						<hr>
 					</div>
 						<ul class="answers">
-							<input type="radio" name="q0" id="q0a"><label for="q0a">13</label><br/>
-							<input type="radio" name="q0" id="q0b"><label for="q0b">12</label><br/> <!--correct-->
-							<input type="radio" name="q0" id="q0c"><label for="q0c">11</label><br/>
-							<input type="radio" name="q0" id="q0d"><label for="q0d">10</label><br/>
+							<input type="radio" name="q0" id="q0a" value="a"><label for="q0a">13</label><br/>
+							<input type="radio" name="q0" id="q0b" value="b"><label for="q0b">12</label><br/> <!--correct-->
+							<input type="radio" name="q0" id="q0c" value="c"><label for="q0c">11</label><br/>
+							<input type="radio" name="q0" id="q0d" value="d"><label for="q0d">10</label><br/>
 						</ul>
 						<br/>
 					</div>
@@ -119,10 +140,10 @@
 							<hr>
 						</div>
 						<ul id="answers">
-							<input type="radio" name="q1" id="q1a"><label for="q1a">16</label><br/>
-							<input type="radio" name="q1" id="q1b"><label for="q1b">17</label><br/> <!--correct-->
-							<input type="radio" name="q1" id="q1c"><label for="q1c">19</label><br/>
-							<input type="radio" name="q1" id="q1d"><label for="q1d">18</label><br/>
+							<input type="radio" name="q1" id="q1a" value="a"><label for="q1a">16</label><br/>
+							<input type="radio" name="q1" id="q1b" value="b"><label for="q1b">17</label><br/> <!--correct-->
+							<input type="radio" name="q1" id="q1c" value="c"><label for="q1c">19</label><br/>
+							<input type="radio" name="q1" id="q1d" value="d"><label for="q1d">18</label><br/>
 						</ul>
 						<br/>
 					</div>
@@ -133,10 +154,10 @@
 						<hr>
 					</div>
 						<ul class="answers">
-							<input type="radio" name="q2" id="q2a"><label for="q2a">2</label><br/>
-							<input type="radio" name="q2" id="q2b"><label for="q2b">3</label><br/>
-							<input type="radio" name="q2" id="q2c"><label for="q2c">4</label><br/>
-							<input type="radio" name="q2" id="q2d"><label for="q2d">5</label><br/>	<!--correct-->
+							<input type="radio" name="q2" id="q2a" value="a"><label for="q2a">2</label><br/>
+							<input type="radio" name="q2" id="q2b" value="b"><label for="q2b">3</label><br/>
+							<input type="radio" name="q2" id="q2c" value="c"><label for="q2c">4</label><br/>
+							<input type="radio" name="q2" id="q2d" value="d"><label for="q2d">5</label><br/>	<!--correct-->
 						</ul>
 						<br/>
 					</div>
@@ -147,10 +168,10 @@
 						<hr>
 					</div>
 						<ul class="answers">
-							<input type="radio" name="q3" id="q3a"><label for="q3a">13</label><br/>
-							<input type="radio" name="q3" id="q3b"><label for="q3b">14</label><br/>
-							<input type="radio" name="q3" id="q3c"><label for="q3c">15</label><br/>
-							<input type="radio" name="q3" id="q3d"><label for="q3d">16</label><br/>	<!--correct-->
+							<input type="radio" name="q3" id="q3a" value="a"><label for="q3a">13</label><br/>
+							<input type="radio" name="q3" id="q3b" value="b"><label for="q3b">14</label><br/>
+							<input type="radio" name="q3" id="q3c" value="c"><label for="q3c">15</label><br/>
+							<input type="radio" name="q3" id="q3d" value="d"><label for="q3d">16</label><br/>	<!--correct-->
 						</ul>
 						<br/>
 					</div>
@@ -161,10 +182,10 @@
 						<hr>
 					</div>
 						<ul class="answers">
-							<input type="radio" name="q4" id="q4a"><label for="q4a">8</label><br/>	<!--correct-->
-							<input type="radio" name="q4" id="q4b"><label for="q4b">9</label><br/>
-							<input type="radio" name="q4" id="q4c"><label for="q4c">10</label><br/>
-							<input type="radio" name="q4" id="q4d"><label for="q4d">6</label><br/>
+							<input type="radio" name="q4" id="q4a" value="a"><label for="q4a">8</label><br/>	<!--correct-->
+							<input type="radio" name="q4" id="q4b" value="b"><label for="q4b">9</label><br/>
+							<input type="radio" name="q4" id="q4c" value="c"><label for="q4c">10</label><br/>
+							<input type="radio" name="q4" id="q4d" value="d"><label for="q4d">6</label><br/>
 						</ul>
 						<br/>
 					</div>
@@ -175,10 +196,10 @@
 						<hr>
 					</div>
 						<ul class="answers">
-							<input type="radio" name="q5" id="q5a"><label for="q5a">50</label><br/>
-							<input type="radio" name="q5" id="q5b"><label for="q5b">40</label><br/>
-							<input type="radio" name="q5" id="q5c"><label for="q5c">70</label><br/>
-							<input type="radio" name="q5" id="q5d"><label for="q5d">60</label><br/>	<!--correct-->
+							<input type="radio" name="q5" id="q5a" value="a"><label for="q5a">50</label><br/>
+							<input type="radio" name="q5" id="q5b" value="b"><label for="q5b">40</label><br/>
+							<input type="radio" name="q5" id="q5c" value="c"><label for="q5c">70</label><br/>
+							<input type="radio" name="q5" id="q5d" value="d"><label for="q5d">60</label><br/>	<!--correct-->
 						</ul>
 						<br/>
 					</div>
@@ -189,10 +210,10 @@
 							<hr>
 						</div>
 						<ul class="answers">
-							<input type="radio" name="q6" id="q6a"><label for="q6a">8</label><br/>
-							<input type="radio" name="q6" id="q6b"><label for="q6b">7</label><br/>
-							<input type="radio" name="q6" id="q6c"><label for="q6c">9</label><br/>	<!--correct-->
-							<input type="radio" name="q6" id="q6d"><label for="q6d">None of the above</label><br/>
+							<input type="radio" name="q6" id="q6a" value="a"><label for="q6a">8</label><br/>
+							<input type="radio" name="q6" id="q6b" value="b"><label for="q6b">7</label><br/>
+							<input type="radio" name="q6" id="q6c" value="c"><label for="q6c">9</label><br/>	<!--correct-->
+							<input type="radio" name="q6" id="q6d" value="d"><label for="q6d">None of the above</label><br/>
 						</ul>
 						<br/>
 					</div>
@@ -203,10 +224,10 @@
 						<hr>
 					</div>
 						<ul class="answers">
-							<input type="radio" name="q7" id="q7a"><label for="q7a">7</label><br/> <!--correct-->
-							<input type="radio" name="q7" id="q7b"><label for="q7b">8</label><br/>
-							<input type="radio" name="q7" id="q7c"><label for="q7c">9</label><br/>	
-							<input type="radio" name="q7" id="q7d"><label for="q7d">6</label><br/>
+							<input type="radio" name="q7" id="q7a" value="a"><label for="q7a">7</label><br/> <!--correct-->
+							<input type="radio" name="q7" id="q7b" value="b"><label for="q7b">8</label><br/>
+							<input type="radio" name="q7" id="q7c" value="c"><label for="q7c">9</label><br/>	
+							<input type="radio" name="q7" id="q7d" value="d"><label for="q7d">6</label><br/>
 						</ul>
 						<br/>
 					</div>
@@ -217,10 +238,10 @@
 						<hr>
 					</div>
 						<ul class="answers">
-							<input type="radio" name="q8" id="q8a"><label for="q8a">19</label><br/>
-							<input type="radio" name="q8" id="q8b"><label for="q8b">18</label><br/>
-							<input type="radio" name="q8" id="q8c"><label for="q8c">9</label><br/>	<!--correct-->
-							<input type="radio" name="q8" id="q8d"><label for="q8d">8</label><br/>
+							<input type="radio" name="q8" id="q8a" value="a"><label for="q8a">19</label><br/>
+							<input type="radio" name="q8" id="q8b" value="b"><label for="q8b">18</label><br/>
+							<input type="radio" name="q8" id="q8c" value="c"><label for="q8c">9</label><br/>	<!--correct-->
+							<input type="radio" name="q8" id="q8d" value="d"><label for="q8d">8</label><br/>
 						</ul>
 						<br/>
 					</div>
@@ -231,10 +252,10 @@
 						<hr>
 					</div>
 						<ul class="answers">
-							<input type="radio" name="q9" id="q9a">	<label for="q9a">	76</label><br/>
-							<input type="radio" name="q9" id="q9b">	<label for="q9b">	77</label><br/>	<!--correct-->
-							<input type="radio" name="q9" id="q9c">	<label for="q9c">	78</label><br/>
-							<input type="radio" name="q9" id="q9d">	<label for="q9d">	79</label><br/>
+							<input type="radio" name="q9" id="q9a" value="a">	<label for="q9a">	76</label><br/>
+							<input type="radio" name="q9" id="q9b" value="b">	<label for="q9b">	77</label><br/>	<!--correct-->
+							<input type="radio" name="q9" id="q9c" value="c">	<label for="q9c">	78</label><br/>
+							<input type="radio" name="q9" id="q9d" value="d">	<label for="q9d">	79</label><br/>
 						</ul>
 						<br/>
 					</div>
@@ -245,8 +266,8 @@
 			
 			<div class="row">
 			<div class="col-md-12 column">
-				<p id="score"><strong>Score:</strong> 0</p>
-				<span id="score"></span>
+				<p id="score"><strong>Score:</strong> <span id="score-span"></span></p>
+				
 			</div>
 			</div>
 			
