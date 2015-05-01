@@ -48,6 +48,10 @@
 				} else{
 					alert("That's incorrect; please try again!")
 				}
+				
+				if (score >= 5){
+					document.getElementById('next-level').innerHTML = "<div class='col-md-3 column'><a href='iiindex.html' class='btn btn-primary' type='button'>Next Level <span class='glyphicon glyphicon-chevron-right'></span><span class='glyphicon glyphicon-chevron-right'></span></a> </div>";
+				}
 				//score++;
 				//alert(answers[question] == answer);
 				document.getElementById('score-span').innerHTML = score;
@@ -93,7 +97,7 @@
 				<div class="col-md-12 column">
 					<div class="btn-group-vertical btn-group-lg" role="group">
 						 <a href="iindex.html" class="btn btn-primary" type="button"> Home</a>
- 						 <a href="toolbox.html" class="btn btn-success" type="button"> Tools</a> 
+ 						 <a href="https://www.google.com/search?client=ubuntu&channel=fs&q=google+calculator&ie=utf-8&oe=utf-8" class="btn btn-success" type="button"> Tools</a> 
 						 <a href="tutorial.html" class="btn btn-warning" type="button"> Tutorial</a>
 						 <a href="https://docs.google.com/forms/d/1K23b3lFIwX4KjeBBM3YDtIpuizV2uH1MiIuC1lG_RXk/viewform"  class="btn btn-info" type="button"> Feedback</a>
 						 <a href="" class="btn btn-danger" type="button"> Logout</a>
@@ -276,7 +280,7 @@
 				   <a href="#question-carousel" class="btn btn-danger" type="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span><span class="glyphicon glyphicon-chevron-left"></span> Previous</a> 
 				</div>
 				<div class="col-md-4 column">
-				   <a href="https://www.google.com/search?client=ubuntu&channel=fs&q=google+calculator&ie=utf-8&oe=utf-8" class="btn btn-warning" type="button">Hint</a> 
+				   <a href="tutorial.html" class="btn btn-warning" type="button">Hint</a> 
 				</div>
 				<div class="col-md-4 column">
 				   <a href="#question-carousel" class="btn btn-success" type="button" data-slide="next">Next <span class="glyphicon glyphicon-chevron-right"></span><span class="glyphicon glyphicon-chevron-right"></span></a> 

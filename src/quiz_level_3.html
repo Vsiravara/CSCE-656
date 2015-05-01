@@ -48,6 +48,10 @@
 				} else{
 					alert("That's incorrect; please try again!")
 				}
+				
+				if (score >= 5){
+					document.getElementById('next-level').innerHTML = "<div class='col-md-3 column'><a href='iindex.html' class='btn btn-primary' type='button'>Next Level <span class='glyphicon glyphicon-chevron-right'></span><span class='glyphicon glyphicon-chevron-right'></span></a> </div>";
+				}
 				//score++;
 				//alert(answers[question] == answer);
 				document.getElementById('score-span').innerHTML = score;
