@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CSCE 656</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+	<!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
+	<!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
+	<!--script src="js/less-1.3.3.min.js"></script-->
+	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
+	
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="288x288" href="img/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="img/favicon.png">
+  
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+	<!--<script type="text/javascript" src="js/quiz.js"></script>-->
+
+	<script type="text/javascript">
+		var score = 0,
+		answers = {q0: 'b', q1: 'b', q2: 'd', q3: 'd', q4: 'a', q5: 'd', q6: 'c', q7: 'a', q8: 'c', q9: 'b'};
+		
+		$(document).ready(function(){
+			$('input:radio').click(function(){
+			var question = $(this).attr('name');
+			var answer = $(this).val();
+				if (answers[question] == answer){
+					score++;
+					alert("That's correct; great job!");
+					
+				} else{
+					alert("That's incorrect; please try again!")
+				}
+				//score++;
+				//alert(answers[question] == answer);
+				document.getElementById('score-span').innerHTML = score;
+			});
+		});
+	</script>
+   <style>
+  .grey{
+		background-color: #7FFFD4;
+		padding:20px;
+		
+       }
+  </style>
+</head>
+
+<body>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			
+			<div class="row clearfix">
+				<div class="col-md-3 column">
+					<img class="img-circle" alt="140x140" src="img/pikachu.jpeg" onclick="www.google.com">
+				</div>
+				<hr>
+				
+				<div class="col-md-9 column">
+				<div class="grey">
+				<div class="well">
+					<h3 class="text-center">
+						Quiz 3, START!
+					</h3>
+				</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="row clearfix">
+		<div class="col-md-3 column">
+			<div class="row clearfix">
+				<div class="col-md-12 column">
+					<div class="btn-group-vertical btn-group-lg" role="group">
+						 <a href="iiindex.html" class="btn btn-primary" type="button"> Home</a>
+ 						 <a href="toolbox.html" class="btn btn-success" type="button"> Tools</a> 
+						 <a href="tutorial.html" class="btn btn-warning" type="button"> Tutorial</a>
+						 <a href="https://docs.google.com/forms/d/1K23b3lFIwX4KjeBBM3YDtIpuizV2uH1MiIuC1lG_RXk/viewform"  class="btn btn-info" type="button"> Feedback</a>
+						 <a href="" class="btn btn-danger" type="button"> Logout</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-9 column">
+			<div class="row">
+			<div id="question-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+				 <!-- Indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#question-carousel" data-slide-to="0" class="active"></li>
+					<li data-target="#question-carousel" data-slide-to="1"></li>
+					<li data-target="#question-carousel" data-slide-to="2"></li>
+					<li data-target="#question-carousel" data-slide-to="3"></li>
+					<li data-target="#question-carousel" data-slide-to="4"></li>
+					<li data-target="#question-carousel" data-slide-to="5"></li>
+					<li data-target="#question-carousel" data-slide-to="6"></li>
+					<li data-target="#question-carousel" data-slide-to="7"></li>
+					<li data-target="#question-carousel" data-slide-to="8"></li>
+					<li data-target="#question-carousel" data-slide-to="9"></li>
+				</ol>
+			
+				<div class="carousel-inner" role="listbox">
+				
+					<div id="question0" class="item active">
+						<div class="col-md-12 column">
+						<h4 class="question"><strong>Question 1:</strong> What is 5+7?</h4>
+						<hr>
+					</div>
+						<ul class="answers">
+							<input type="radio" name="q0" id="q0a" value="a"><label for="q0a">13</label><br/>
+							<input type="radio" name="q0" id="q0b" value="b"><label for="q0b">12</label><br/> <!--correct-->
+							<input type="radio" name="q0" id="q0c" value="c"><label for="q0c">11</label><br/>
+							<input type="radio" name="q0" id="q0d" value="d"><label for="q0d">10</label><br/>
+						</ul>
+						<br/>
+					</div>
+					
+					<div id="question1" class="item">
+						<div class="col-md-12 column">
+							<h4 id="question"><strong>Question 2:</strong> What is 12+5?</h4>
+							<hr>
+						</div>
+						<ul id="answers">
+							<input type="radio" name="q1" id="q1a" value="a"><label for="q1a">16</label><br/>
+							<input type="radio" name="q1" id="q1b" value="b"><label for="q1b">17</label><br/> <!--correct-->
+							<input type="radio" name="q1" id="q1c" value="c"><label for="q1c">19</label><br/>
+							<input type="radio" name="q1" id="q1d" value="d"><label for="q1d">18</label><br/>
+						</ul>
+						<br/>
+					</div>
+					
+					<div id="question2" class="item">
+						<div class="col-md-12 column">
+						<h4 class="question"><strong>Question 3:</strong> What is 8-3?</h4>
+						<hr>
+					</div>
+						<ul class="answers">
+							<input type="radio" name="q2" id="q2a" value="a"><label for="q2a">2</label><br/>
+							<input type="radio" name="q2" id="q2b" value="b"><label for="q2b">3</label><br/>
+							<input type="radio" name="q2" id="q2c" value="c"><label for="q2c">4</label><br/>
+							<input type="radio" name="q2" id="q2d" value="d"><label for="q2d">5</label><br/>	<!--correct-->
+						</ul>
+						<br/>
+					</div>
+					
+					<div id="question3" class="item">
+						<div class="col-md-12 column">
+						<h4 class="question"><strong>Question 4:</strong> What is 23-7?</h4>
+						<hr>
+					</div>
+						<ul class="answers">
+							<input type="radio" name="q3" id="q3a" value="a"><label for="q3a">13</label><br/>
+							<input type="radio" name="q3" id="q3b" value="b"><label for="q3b">14</label><br/>
+							<input type="radio" name="q3" id="q3c" value="c"><label for="q3c">15</label><br/>
+							<input type="radio" name="q3" id="q3d" value="d"><label for="q3d">16</label><br/>	<!--correct-->
+						</ul>
+						<br/>
+					</div>
+					
+					<div id="question4" class="item">
+						<div class="col-md-12 column">
+						<h4 class="question"><strong>Question 5:</strong> What is 2*4?</h4>
+						<hr>
+					</div>
+						<ul class="answers">
+							<input type="radio" name="q4" id="q4a" value="a"><label for="q4a">8</label><br/>	<!--correct-->
+							<input type="radio" name="q4" id="q4b" value="b"><label for="q4b">9</label><br/>
+							<input type="radio" name="q4" id="q4c" value="c"><label for="q4c">10</label><br/>
+							<input type="radio" name="q4" id="q4d" value="d"><label for="q4d">6</label><br/>
+						</ul>
+						<br/>
+					</div>
+					
+					<div id="question5" class="item">
+						<div class="col-md-12 column">
+						<h4 class="question"><strong>Question 6:</strong> What is 12*5?</h4>
+						<hr>
+					</div>
+						<ul class="answers">
+							<input type="radio" name="q5" id="q5a" value="a"><label for="q5a">50</label><br/>
+							<input type="radio" name="q5" id="q5b" value="b"><label for="q5b">40</label><br/>
+							<input type="radio" name="q5" id="q5c" value="c"><label for="q5c">70</label><br/>
+							<input type="radio" name="q5" id="q5d" value="d"><label for="q5d">60</label><br/>	<!--correct-->
+						</ul>
+						<br/>
+					</div>
+					
+					<div id="question6" class="item">
+						<div class="col-md-12 column">
+							<h4 class="question"><strong>Question 7:</strong> What is 18/2?</h4>
+							<hr>
+						</div>
+						<ul class="answers">
+							<input type="radio" name="q6" id="q6a" value="a"><label for="q6a">8</label><br/>
+							<input type="radio" name="q6" id="q6b" value="b"><label for="q6b">7</label><br/>
+							<input type="radio" name="q6" id="q6c" value="c"><label for="q6c">9</label><br/>	<!--correct-->
+							<input type="radio" name="q6" id="q6d" value="d"><label for="q6d">None of the above</label><br/>
+						</ul>
+						<br/>
+					</div>
+					
+					<div id="question7" class="item">
+						<div class="col-md-12 column">
+						<h4 class="question"><strong>Question 8:</strong> What is 56/8?</h4>
+						<hr>
+					</div>
+						<ul class="answers">
+							<input type="radio" name="q7" id="q7a" value="a"><label for="q7a">7</label><br/> <!--correct-->
+							<input type="radio" name="q7" id="q7b" value="b"><label for="q7b">8</label><br/>
+							<input type="radio" name="q7" id="q7c" value="c"><label for="q7c">9</label><br/>	
+							<input type="radio" name="q7" id="q7d" value="d"><label for="q7d">6</label><br/>
+						</ul>
+						<br/>
+					</div>
+					
+					<div id="question8" class="item">
+						<div class="col-md-12 column">
+						<h4 class="question"><strong>Question 9:</strong> What is 81/9?</h4>
+						<hr>
+					</div>
+						<ul class="answers">
+							<input type="radio" name="q8" id="q8a" value="a"><label for="q8a">19</label><br/>
+							<input type="radio" name="q8" id="q8b" value="b"><label for="q8b">18</label><br/>
+							<input type="radio" name="q8" id="q8c" value="c"><label for="q8c">9</label><br/>	<!--correct-->
+							<input type="radio" name="q8" id="q8d" value="d"><label for="q8d">8</label><br/>
+						</ul>
+						<br/>
+					</div>
+					
+					<div id="question9" class="item">
+						<div class="col-md-12 column">
+						<h4 class="question"><strong>Question 10:</strong> What is 34+43?</h4>
+						<hr>
+					</div>
+						<ul class="answers">
+							<input type="radio" name="q9" id="q9a" value="a">	<label for="q9a">	76</label><br/>
+							<input type="radio" name="q9" id="q9b" value="b">	<label for="q9b">	77</label><br/>	<!--correct-->
+							<input type="radio" name="q9" id="q9c" value="c">	<label for="q9c">	78</label><br/>
+							<input type="radio" name="q9" id="q9d" value="d">	<label for="q9d">	79</label><br/>
+						</ul>
+						<br/>
+					</div>
+					
+				</div>
+			
+			</div>
+			
+			<div class="row">
+			<div class="col-md-12 column">
+				<p id="score"><strong>Score:</strong> <span id="score-span"></span></p>
+				
+			</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-4 column">
+				   <a href="#question-carousel" class="btn btn-danger" type="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span><span class="glyphicon glyphicon-chevron-left"></span> Previous</a> 
+				</div>
+				<div class="col-md-4 column">
+				   <a href="https://www.google.com/search?client=ubuntu&channel=fs&q=google+calculator&ie=utf-8&oe=utf-8" class="btn btn-warning" type="button">Hint</a> 
+				</div>
+				<div class="col-md-4 column">
+				   <a href="#question-carousel" class="btn btn-success" type="button" data-slide="next">Next <span class="glyphicon glyphicon-chevron-right"></span><span class="glyphicon glyphicon-chevron-right"></span></a> 
+				</div>
+			</div>
+	</div>
+</div>
+</body>
+</html>
