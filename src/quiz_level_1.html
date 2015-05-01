@@ -28,8 +28,10 @@
   <link rel="shortcut icon" href="img/favicon.png">
   
 	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/scripts.js"></script>
+	<script type="text/javascript" src="js/quiz.js"></script>
   <style type="text"css">
  .block {
       	display: block;
@@ -59,11 +61,11 @@
 		<div class="col-md-2 column">
 			<div class="row clearfix">
 				<div class="col-md-12 column">
-					<div class="btn-group btn-group-vertical btn-group-lg">
+					<div class="btn-group-vertical btn-group-lg" role="group">
 						 <a href="index.html" class="btn btn-primary" type="button"> Home</a>
- 						 <a href=""  class="btn btn-info" type="button"> Help</a>
- 						 <a href="" class="btn btn-success" type="button"> Tools</a> 
-						 <a href="" class="btn btn-warning" type="button"> Tutorial</a>
+ 						 <a href="toolbox.html" class="btn btn-success" type="button"> Tools</a> 
+						 <a href="tutorial.html" class="btn btn-warning" type="button"> Tutorial</a>
+						 <a href="https://docs.google.com/forms/d/1K23b3lFIwX4KjeBBM3YDtIpuizV2uH1MiIuC1lG_RXk/viewform"  class="btn btn-info" type="button"> Feedback</a>
 						 <a href="" class="btn btn-danger" type="button"> Logout</a>
 					</div>
 				</div>
@@ -71,38 +73,34 @@
 		</div>
 		<div class="col-md-10 column">
 			<div class="row ">
-				<div class="col-md-12 column">
-					<h4> What is 93-37 </h4>
+			<div>
+			<!--<p class="question">What is 93-37?</p>-->
+			<div class="col-md-12 column">
+					<h4>What is 93-37?</h4>
+					<hr>
 				</div>
-				
-				
-			<hr>
-			<div class="row ">
-		<form>
-			<label class="block"><input type="radio" name="radgroup" value="A">54</label>
-			<hr>
-			<label class="block"><input type="radio" name="radgroup" value="B">56</label>
-			<hr>
-			<label class="block"><input type="radio" name="radgroup" value="C">55</label>
-			<hr>
-			<label class="block"><input type="radio" name="radgroup" value="D">130</label>
-
-		</form>
-				
-				
+			<ul class="answers">
+				<input type="radio" name="q1" id="q1a"><label for="q1a">54</label><br/>
+				<input type="radio" name="q1" id="q1b"><label for="q1b">56</label><br/>
+				<input type="radio" name="q1" id="q1c"><label for="q1c">55</label><br/>
+				<input type="radio" name="q1" id="q1d"><label for="q1d">130</label><br/>
+			</ul>
+			<br/>
+			<!--<div id="results">Show me the answers!</div>-->
+			
 			</div>
+			
 			<div class="row">
 				<div class="col-md-4 column">
-				   <a href="" class="btn btn-warning" type="button"> Previous</a> 
+				   <a href="" class="btn btn-danger" type="button"><span class="glyphicon glyphicon-chevron-left"></span><span class="glyphicon glyphicon-chevron-left"></span> Previous</a> 
 				</div>
 				<div class="col-md-4 column">
-				   <a href="https://www.google.com/search?client=ubuntu&channel=fs&q=google+calculator&ie=utf-8&oe=utf-8" class="btn btn-danger" type="button"> Hint</a> 
+				   <a href="https://www.google.com/search?client=ubuntu&channel=fs&q=google+calculator&ie=utf-8&oe=utf-8" class="btn btn-warning" type="button">Hint</a> 
 				</div>
 				<div class="col-md-4 column">
-				   <a href="question1.html" class="btn btn-success" type="button"> Next</a> 
+				   <a href="question1.html" class="btn btn-success" type="button">Next <span class="glyphicon glyphicon-chevron-right"></span><span class="glyphicon glyphicon-chevron-right"></span></a> 
 				</div>
-
-		</div>
+			</div>
 	</div>
 </div>
 </body>
